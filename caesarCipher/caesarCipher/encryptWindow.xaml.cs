@@ -19,9 +19,31 @@ namespace caesarCipher
     /// </summary>
     public partial class encryptWindow : Window
     {
+
+        public static string userInput;
+
+
         public encryptWindow()
         {
             InitializeComponent();
+            unencryptedData.Text = userInput;
+        
+        }
+
+        private void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            MainWindow home = new MainWindow();
+            home.Show();
+            this.Close();
+
+        }
+
+        public void setUserInput(string s)
+        {
+
+            userInput = s;
+
         }
     }
 }

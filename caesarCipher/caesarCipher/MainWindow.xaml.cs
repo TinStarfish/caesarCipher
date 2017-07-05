@@ -21,25 +21,34 @@ namespace caesarCipher
     public partial class MainWindow : Window
     {
 
-        public static string userEnteredValue;
+        public string userEnteredValue;
         public static bool modeSelect;
-        public static bool firstSelected = true;
+        public static bool firstSelected;
 
         public MainWindow()
         {
             InitializeComponent();
+
+         //Initialize Variables Here
+            modeSelect = true;
+            firstSelected = true;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            if (modeSelect)
+            if (modeSelect) //This leads to the Encrypter
             {
                 encryptWindow encrypt = new encryptWindow();
+
+                encrypt.setUserInput(userEnteredValue);
+
                 encrypt.Show();
                 this.Close();
 
-            } else
+            }
+            else  //This leads to the decrypter
             {
 
                 decryptWindow decrypt = new decryptWindow();
@@ -74,20 +83,35 @@ namespace caesarCipher
 
         }
 
-        private string getUserInput()
+        public string getUserInput()
         {
 
             return userEnteredValue;
 
         }
 
-        private void setUserInput(string c)
+        public void setUserInput(string c)
         {
 
             userEnteredValue = c;
 
         }
 
+        private void deleteText(object sender, MouseButtonEventArgs e)
+        {
 
+            userText.Clear();
+
+        }
+
+        private string encryptUserInput()
+        {
+
+            string encryptedMessage = "";
+
+
+            return encryptedMessage;
+
+        }
     }
 }
