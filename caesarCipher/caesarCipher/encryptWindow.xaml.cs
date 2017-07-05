@@ -22,7 +22,7 @@ namespace caesarCipher
 
         public static string userInput;
 
-
+        //heres a comment
         public encryptWindow()
         {
             InitializeComponent();

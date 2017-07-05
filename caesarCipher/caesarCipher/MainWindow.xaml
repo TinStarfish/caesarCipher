@@ -5,14 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:caesarCipher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="263.725" Width="279.902">
+        Title="MainWindow" Height="272.549" Width="387.745">
     <Grid Margin="0,0,2,7">
         <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="87" Margin="10,10,0,0"><Run Text="Caesar Cipher"/></TextBlock>
-        <Button x:Name="enterButton" Content="Go!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Margin="75,178,0,0" Height="39" IsCancel="True" Click="Button_Click"/>
-        <RadioButton x:Name="Encrypt" Content="Encrypt" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Checked="EncryptRadioSelected"/>
-        <RadioButton x:Name="decrypt" Content="Decrypt" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top" Checked="DecryptRadioSelected"/>
-        <TextBox x:Name="userText" HorizontalAlignment="Left" Height="23" Margin="10,93,0,0" TextWrapping="Wrap" Text="enter text..." VerticalAlignment="Top" Width="250" MouseDown="deleteText"/>
+        <Button x:Name="enterButton" Content="Go!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Margin="235,179,0,0" Height="39" IsCancel="True" Click="Button_Click"/>
+        <RadioButton x:Name="Encrypt" Content="Encrypt" HorizontalAlignment="Left" Margin="236,137,0,0" VerticalAlignment="Top" Checked="EncryptRadioSelected"/>
+        <RadioButton x:Name="decrypt" Content="Decrypt" HorizontalAlignment="Left" Margin="235,153,0,0" VerticalAlignment="Top" Checked="DecryptRadioSelected"/>
+        <TextBox x:Name="userText" HorizontalAlignment="Left" Height="40" Margin="10,80,0,0" TextWrapping="Wrap" Text="enter text..." VerticalAlignment="Top" Width="340" MouseDown="deleteText"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,37,0,0" TextWrapping="Wrap" Text="Welcome to the Caesar Cipher Solver. Please enter text you wish to encrypt or decrypt below. " VerticalAlignment="Top" Cursor=""/>
+        <TextBox x:Name="encryptionKey" HorizontalAlignment="Left" Height="28" Margin="10,169,0,0" TextWrapping="Wrap" Text="Key" VerticalAlignment="Top" Width="52"/>
+        <TextBlock HorizontalAlignment="Left" Height="38" Margin="10,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"><Run Text="Please enter the encryption key here:"/><LineBreak/><Run/></TextBlock>
 
     </Grid>
 </Window>
