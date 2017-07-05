@@ -9,9 +9,9 @@
     <Grid Margin="0,0,2,7">
         <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="87" Margin="10,10,0,0"><Run Text="Caesar Cipher"/></TextBlock>
         <Button x:Name="enterButton" Content="Go!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Margin="75,178,0,0" Height="39" IsCancel="True" Click="Button_Click"/>
-        <RadioButton x:Name="Encrypt" Content="Encrypt" HorizontalAlignment="Left" Margin="10,105,0,0" VerticalAlignment="Top" Checked="EncryptRadioSelected"/>
-        <RadioButton x:Name="decrypt" Content="Decrypt" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" Checked="DecryptRadioSelected"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,82,0,0" TextWrapping="Wrap" Text="enter text..." VerticalAlignment="Top" Width="250"/>
+        <RadioButton x:Name="Encrypt" Content="Encrypt" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Checked="EncryptRadioSelected"/>
+        <RadioButton x:Name="decrypt" Content="Decrypt" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top" Checked="DecryptRadioSelected"/>
+        <TextBox x:Name="userText" HorizontalAlignment="Left" Height="23" Margin="10,93,0,0" TextWrapping="Wrap" Text="enter text..." VerticalAlignment="Top" Width="250" MouseEnter="deleteText"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,37,0,0" TextWrapping="Wrap" Text="Welcome to the Caesar Cipher Solver. Please enter text you wish to encrypt or decrypt below. " VerticalAlignment="Top" Cursor=""/>
 
     </Grid>

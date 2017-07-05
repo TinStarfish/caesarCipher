@@ -21,7 +21,9 @@ namespace caesarCipher
     public partial class MainWindow : Window
     {
 
+        public static string userEnteredValue;
         public static bool modeSelect;
+        public static bool firstSelected = true;
 
         public MainWindow()
         {
@@ -59,6 +61,30 @@ namespace caesarCipher
         {
 
             modeSelect = false;
+
+        }
+
+
+        private void deleteText(object sender, MouseEventArgs e)
+        {
+            if (firstSelected)
+                 userText.Clear();
+
+            firstSelected = false;
+
+        }
+
+        private string getUserInput()
+        {
+
+            return userEnteredValue;
+
+        }
+
+        private void setUserInput(string c)
+        {
+
+            userEnteredValue = c;
 
         }
 
