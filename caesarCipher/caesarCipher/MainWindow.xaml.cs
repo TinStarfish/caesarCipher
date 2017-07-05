@@ -20,9 +20,48 @@ namespace caesarCipher
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public static bool modeSelect;
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (modeSelect)
+            {
+                encryptWindow encrypt = new encryptWindow();
+                encrypt.Show();
+                this.Close();
+
+            } else
+            {
+
+                decryptWindow decrypt = new decryptWindow();
+                decrypt.Show();
+                this.Close();
+
+            }
+
+        }
+
+        private void EncryptRadioSelected (object sender, RoutedEventArgs e)
+        {
+
+            modeSelect = true;
+
+        }
+
+        private void DecryptRadioSelected(object sender, RoutedEventArgs e)
+        {
+
+            modeSelect = false;
+
+        }
+
+
     }
 }
