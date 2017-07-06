@@ -22,6 +22,7 @@ namespace caesarCipher
     {
 
         public string userEnteredValue;
+        public int userKey;
         public static bool modeSelect;
         public static bool firstSelected;
 
@@ -43,20 +44,21 @@ namespace caesarCipher
 
             if (modeSelect) //This leads to the Encrypter
             {
-                encryptWindow encrypt = new encryptWindow();
 
-                encrypt.setUserInput(userEnteredValue);
+                setUserInput();
 
-                encrypt.Show();
-                this.Close();
+                userKey = getUserKey();
+                this.outputBox.Text = "(key: " + userKey + ") "+ translateUserInput();
+               
 
             }
             else  //This leads to the decrypter
             {
 
-                decryptWindow decrypt = new decryptWindow();
-                decrypt.Show();
-                this.Close();
+                setUserInput();
+                userKey = getUserKey();
+                this.outputBox.Text = "(key: " + userKey + ") " + translateUserInput();
+                
 
             }
 
@@ -89,16 +91,19 @@ namespace caesarCipher
         public string getUserInput()
         {
 
+
             return userEnteredValue;
 
         }
 
-        public void setUserInput(string c)
+        public void setUserInput()
         {
 
-            userEnteredValue = c;
+            userEnteredValue = userText.Text;
 
         }
+
+     
 
         private void deleteText(object sender, MouseButtonEventArgs e)
         {
@@ -106,13 +111,29 @@ namespace caesarCipher
             userText.Clear();
 
         }
+        
+        private int getUserKey ()
+        {
+
+            string i = this.encryptionKey.Text;
+            int j;
+            if (int.TryParse(i, out j))
+            {
+
+                return j;
+
+            }
+
+            return j;
+
+        }
 
         private string translateUserInput()
         {
-            string original = "ABC"; //set this to the user input
+            string original = userEnteredValue; //set this to the user input
             string translated = "";
 
-            int key = 3; //set this to the user input key
+            int key = userKey; //set this to the user input key
 
             string LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             //^expand this to encrypt more characters
@@ -160,6 +181,27 @@ namespace caesarCipher
             }
 
             return translated;
+
+        }
+
+        private void deleteText(object sender, RoutedEventArgs e)
+        {
+
+            encryptionKey.Clear();
+
+        }
+
+        private void deleteUserText(object sender, RoutedEventArgs e)
+        {
+
+            userText.Clear();
+
+        }
+
+        private void copyOutputToClipboard(object sender, RoutedEventArgs e)
+        {
+
+            Clipboard.SetText(translateUserInput());
 
         }
     }

@@ -20,13 +20,18 @@ namespace caesarCipher
     public partial class encryptWindow : Window
     {
 
-        public static string userInput;
+
+        public static string userInput = "(default)";
+        public static string userOutput = "(default)";
 
         //heres a comment
         public encryptWindow()
         {
+     
             InitializeComponent();
-            unencryptedData.Text = userInput;
+            MainWindow home = new MainWindow();
+
+            unencryptedData.Text = home.getUserInput();
         
         }
 
@@ -39,11 +44,5 @@ namespace caesarCipher
 
         }
 
-        public void setUserInput(string s)
-        {
-
-            userInput = s;
-
-        }
     }
 }
