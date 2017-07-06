@@ -33,6 +33,9 @@ namespace caesarCipher
             modeSelect = true;
             firstSelected = true;
 
+            //tester for translateUserInput()
+            //Console.WriteLine(translateUserInput());
+            //^console window never opens. maybe a wpf thing?
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -104,13 +107,59 @@ namespace caesarCipher
 
         }
 
-        private string encryptUserInput()
+        private string translateUserInput()
         {
+            string original = "ABC"; //set this to the user input
+            string translated = "";
 
-            string encryptedMessage = "";
+            int key = 3; //set this to the user input key
 
+            string LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            //^expand this to encrypt more characters
 
-            return encryptedMessage;
+            //mod key to get a usable one
+            key = key % LETTERS.Length;
+
+            original = original.ToUpper();
+            //^remove this if upper and lowercase letters are to be used
+
+            int transNum = 0;
+
+            foreach (char symbol in original)
+            {
+                if (LETTERS.Contains(symbol))
+                {
+                    transNum = LETTERS.IndexOf(symbol);
+
+                    if (modeSelect)
+                    {
+                        //encrypt
+                        transNum += key;
+                    }
+                    else
+                    {
+                        //decrypt
+                        transNum -= key;
+                    }
+
+                    if (transNum >= LETTERS.Length)
+                    {
+                        transNum = transNum - LETTERS.Length;
+                    }
+                    else if (transNum < 0)
+                    {
+                        transNum = transNum + LETTERS.Length;
+                    }
+
+                    translated += LETTERS[transNum];
+                }
+                else
+                {
+                    translated += symbol;
+                }
+            }
+
+            return translated;
 
         }
     }
