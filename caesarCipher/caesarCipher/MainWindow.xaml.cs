@@ -135,13 +135,13 @@ namespace caesarCipher
 
             int key = userKey; //set this to the user input key
 
-            string LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            string LETTERS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ~`!@#$%^&*()-_=+[{]}\\|;:\'\",<.>/? ";
             //^expand this to encrypt more characters
 
             //mod key to get a usable one
             key = key % LETTERS.Length;
 
-            original = original.ToUpper();
+            //original = original.ToUpper();
             //^remove this if upper and lowercase letters are to be used
 
             int transNum = 0;
