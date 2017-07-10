@@ -54,11 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="decryptWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="encryptWindow.xaml">
+    <Page Include="errorPopup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -70,11 +66,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="decryptWindow.xaml.cs">
-      <DependentUpon>decryptWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="encryptWindow.xaml.cs">
-      <DependentUpon>encryptWindow.xaml</DependentUpon>
+    <Compile Include="errorPopup.xaml.cs">
+      <DependentUpon>errorPopup.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:caesarCipher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="352.264" Width="526.709">
+        Title="MainWindow" Height="368.535" Width="526.709">
     <Grid Margin="0,0,2,7">
         <TextBlock x:Name="Title1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="311" Margin="10,10,0,0" Text="Caesar Cipher- Wyatt Hite, Trevor Waters" FontWeight="Bold" TextDecorations="{x:Null}" FontFamily="Vrinda" FontSize="14"/>
         <Button x:Name="enterButton1" Content="Go!" VerticalAlignment="Top" Margin="380,144,21,0" Height="39" IsCancel="True" Click="Button_Click"/>

@@ -15,13 +15,23 @@ using System.Windows.Shapes;
 namespace caesarCipher
 {
     /// <summary>
-    /// Interaction logic for decryptWindow.xaml
+    /// Interaction logic for errorPopup.xaml
     /// </summary>
-    public partial class decryptWindow : Window
+    public partial class errorPopup : Window
     {
-        public decryptWindow()
+        public errorPopup()
         {
             InitializeComponent();
+        }
+
+        private void returnHome(object sender, RoutedEventArgs e)
+        {
+
+            MainWindow home = new MainWindow();
+            home.Show();
+            this.Close();
+
+
         }
     }
 }

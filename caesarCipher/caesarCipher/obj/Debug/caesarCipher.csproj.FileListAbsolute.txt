@@ -12,10 +12,6 @@ C:\Users\Trevor\Documents\GitHub\caesarCipher\caesarCipher\caesarCipher\obj\Debu
 C:\Users\Trevor\Documents\GitHub\caesarCipher\caesarCipher\caesarCipher\obj\Debug\caesarCipher.csproj.GenerateResource.Cache
 C:\Users\Trevor\Documents\GitHub\caesarCipher\caesarCipher\caesarCipher\obj\Debug\caesarCipher.exe
 C:\Users\Trevor\Documents\GitHub\caesarCipher\caesarCipher\caesarCipher\obj\Debug\caesarCipher.pdb
-C:\Users\Trevor\Documents\GitHub\caesarCipher\caesarCipher\caesarCipher\obj\Debug\encryptWindow.g.cs
-C:\Users\Trevor\Documents\GitHub\caesarCipher\caesarCipher\caesarCipher\obj\Debug\encryptWindow.baml
-C:\Users\Trevor\Documents\GitHub\caesarCipher\caesarCipher\caesarCipher\obj\Debug\decryptWindow.g.cs
-C:\Users\Trevor\Documents\GitHub\caesarCipher\caesarCipher\caesarCipher\obj\Debug\decryptWindow.baml
 C:\Users\wyatt\Documents\Quarter08\CSC440-TestingAndQualityAssurance-NathanRoberson\caesarCipher\caesarCipher\caesarCipher\bin\Debug\caesarCipher.exe.config
 C:\Users\wyatt\Documents\Quarter08\CSC440-TestingAndQualityAssurance-NathanRoberson\caesarCipher\caesarCipher\caesarCipher\bin\Debug\caesarCipher.exe
 C:\Users\wyatt\Documents\Quarter08\CSC440-TestingAndQualityAssurance-NathanRoberson\caesarCipher\caesarCipher\caesarCipher\bin\Debug\caesarCipher.pdb
@@ -34,3 +30,5 @@ C:\Users\wyatt\Documents\Quarter08\CSC440-TestingAndQualityAssurance-NathanRober
 C:\Users\wyatt\Documents\Quarter08\CSC440-TestingAndQualityAssurance-NathanRoberson\caesarCipher\caesarCipher\caesarCipher\obj\Debug\caesarCipher.csproj.GenerateResource.Cache
 C:\Users\wyatt\Documents\Quarter08\CSC440-TestingAndQualityAssurance-NathanRoberson\caesarCipher\caesarCipher\caesarCipher\obj\Debug\caesarCipher.exe
 C:\Users\wyatt\Documents\Quarter08\CSC440-TestingAndQualityAssurance-NathanRoberson\caesarCipher\caesarCipher\caesarCipher\obj\Debug\caesarCipher.pdb
+C:\Users\Trevor\Documents\GitHub\caesarCipher\caesarCipher\caesarCipher\obj\Debug\errorPopup.g.cs
+C:\Users\Trevor\Documents\GitHub\caesarCipher\caesarCipher\caesarCipher\obj\Debug\errorPopup.baml

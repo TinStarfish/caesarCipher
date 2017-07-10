@@ -42,24 +42,19 @@ namespace caesarCipher
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            if (modeSelect) //This leads to the Encrypter
+            userKey = getUserKey();
+
+            if (userKey == 0)
             {
 
-                setUserInput();
+                errorPopup err = new errorPopup();
+                err.Show();
 
-                userKey = getUserKey();
-                this.outputBox.Text = "(key: " + userKey + ") "+ translateUserInput();
-               
-
-            }
-            else  //This leads to the decrypter
-            {
+            } else {
 
                 setUserInput();
-                userKey = getUserKey();
                 this.outputBox.Text = "(key: " + userKey + ") " + translateUserInput();
                 
-
             }
 
         }
@@ -135,7 +130,7 @@ namespace caesarCipher
 
             int key = userKey; //set this to the user input key
 
-            string LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            string LETTERS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ~`!@#$%^&*()-_=+[{]}\\|;:\'\",<.>/? ";
             //^expand this to encrypt more characters
 
             //mod key to get a usable one
@@ -204,5 +199,8 @@ namespace caesarCipher
             Clipboard.SetText(translateUserInput());
 
         }
+
+       
+     
     }
 }
