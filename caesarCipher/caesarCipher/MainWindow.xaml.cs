@@ -136,7 +136,7 @@ namespace caesarCipher
             //mod key to get a usable one
             key = key % LETTERS.Length;
 
-            original = original.ToUpper();
+            //original = original.ToUpper();
             //^remove this if upper and lowercase letters are to be used
 
             int transNum = 0;
